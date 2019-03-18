@@ -43,40 +43,30 @@
     <script>
     // I used Two functions here.  Starter idea at:
     // https://codepen.io/ColleenEMc/pen/XmZzWw
-    // photos = document.getElementsByClassName("preview");
 
-    function upDate(photo){
-      var highlight = document.getElementById("image");
-      highlight.style.backgroundImage = "url("+ photo.src +")"
-      highlight.querySelector("p").innerHTML = photo.alt;
- /* In this function you should
-    1) change the url for the background image of the div with the id = "image"
-    to the source file of the preview image
+      function upDate(photo){
+      /* In this function you should
+         1) change the url for the background image of the div with the id = "image"
+         to the source file of the preview image
 
-    2) Change the text  of the div with the id = "image"
-    to the alt text of the preview image
-    */
-      // for (var i=0;i<photos.length;i+=1){
-      //   document.getElementById("image").style.backgroundImage = //get source
-      //   document.querySelector("p").innerHTML = //get alt
-      }
+         2) Change the text  of the div with the id = "image"
+         to the alt text of the preview image*/
+        var highlight = document.getElementById("image");
+        highlight.style.backgroundImage = "url(" + photo.src + ")";
+        highlight.querySelector("p").innerHTML = photo.alt;
+        }
 
-
-	function unDo(){
+	    function unDo(){
      /* In this function you should
     1) Update the url for the background image of the div with the id = "image"
     back to the orginal-image.  You can use the css code to see what that original URL was
 
     2) Change the text  of the div with the id = "image"
-    back to the original text.  You can use the html code to see what that original text was
-    */
-    // for (var i=0;i<photos.length;i+=1){
-    //   document.getElementById("image").style.backgroundColor = "#8e68ff";
-    //   document.querySelector("p").innerHTML = "Hover or tab over/into an image below.";
-    var highlight = document.getElementById("image");
-    highlight.style.backgroundImage = "";
-    highlight.querySelector("p").innerHTML = "Hover or tab over/into an image below";
-    }
+    back to the original text.  You can use the html code to see what that original text was*/
+      var highlight = document.getElementById("image");
+      highlight.style.backgroundImage = "";
+      highlight.querySelector("p").innerHTML = "Hover or tab over/into an image below";
+      }
 
     </script>
 </head>
@@ -89,32 +79,32 @@
         </div>
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview"
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "1"
+            src = 'images/northernlights.JPG'
             alt = "Discovering the Northern Lights">
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview"
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "2"
+            src = 'images/northernlights2.JPG'
             alt = "Lights dancing in Yukon">
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview" tabindex = "1"
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "3"
+            src = 'images/dogsled.JPG'
             alt = "Dog sleeding in Whitehorse">
 
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview"
-              src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "4"
+              src = 'images/puppy.JPG'
               alt = "Cute Alaskan Husky puppy">
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview"
-              src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "5"
+              src = 'images/heart.JPG'
               alt = "Art made with snowshoes">
 
         <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
-        <img onmouseover="upDate(this)" onfocus="upDate(thi)" onmouseout="unDo(this)" onfocusout="unDo()" class = "preview" tabindex = "1"
-              src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
+        <img onmouseover="upDate(this)" onfocus="upDate(this)" onmouseout="unDo(this)" onblur="unDo()" class = "preview" tabindex = "6"
+              src = 'images/osgemeos.JPG'
               alt = "Os Gêmeos graffiti in Vancouver">
 
 </body>
