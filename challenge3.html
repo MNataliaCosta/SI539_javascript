@@ -20,19 +20,38 @@
       var addrInput = document.getElementById("addr").value;
       var missingName = document.getElementById("nameError");
       var missingAddr = document.getElementById("addressError");
-      submitOK = "true";
+
+      submitNameOK = false;
+      submitAddOK = false;
 
       if (nameInput.length == 0){
         missingName.style.display = "block";
-        submitOK = "false";
+      } else {
+        missingName.style.display = "none";
+        submitNameOK = true;
       }
+
       if (addrInput.length == 0){
         missingAddr.style.display = "block";
-        submitOK = "false"
+      } else {
+        missingAddr.style.display = "none";
+        submitAddOK = true;
       }
-      if (submitOK == "false"){
+
+      // console.log(submitAddOK);
+      // console.log(submitNameOK);
+
+      if (submitNameOK && submitAddOK){
+        return true
+      } else {
         return false;
       }
+      // else if (submitNameOK && submitAddOK == "true") {
+      //   return true;
+      // }
+      // else {
+      //   return false;
+      // }
     }
     </script>
 </head>

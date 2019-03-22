@@ -30,14 +30,14 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
 	   function setHomeAddress(){
       // YOUR  JavaScript CODE HERE
 			// console.log('It works.');
-			var input = document.getElementById("bill").value;
+			var inputBill = document.getElementById("bill").value;
 			// console.log(input)
 			if (document.getElementById("useBilling").checked){
-				document.getElementById("home").innerHTML = input;
+				document.getElementById("home").value = inputBill;
 				document.getElementById("home").disabled = true;
 			} else {
 				document.getElementById("home").disabled = false;
-				document.getElementById("home").innerHTML = "";
+				document.getElementById("home").value = "";
 			}
      }
     </script>
